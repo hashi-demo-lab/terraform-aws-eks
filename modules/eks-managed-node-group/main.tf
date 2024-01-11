@@ -6,7 +6,7 @@ data "aws_caller_identity" "current" {}
 ################################################################################
 
 module "user_data" {
-  source = "../_user_data"
+  source = "git::https://github.com/hashi-demo-lab/terraform-aws-eks.git//modules/_user_data"
 
   create   = var.create
   platform = var.platform
